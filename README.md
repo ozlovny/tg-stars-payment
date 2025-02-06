@@ -54,16 +54,20 @@
    python main.py
    ```
 
-### 📝 License
+## 📝 License
+
 This project is MIT licensed. See LICENSE for more information.
 
-### 🌟 Support
+## 🌟 Support
+
 If you find this project useful:
 
 - Give it a star ⭐
 - Share with others 🔄
 - Consider contributing 🛠️
 
+---
+
 <div align="center">
-    <sub>Built with ❤️ by <a href="https://t.me/bohd4nx" target="_blank">Bohdan</a></sub>
+    <h4>Built with ❤️ by <a href="https://t.me/bohd4nx" target="_blank">Bohdan</a></h4>
 </div>
