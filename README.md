@@ -2,11 +2,6 @@
   <h1>🌟 Telegram Stars Payment</h1>
   <p>Simple example of integrating Telegram Stars payments into bots using aiogram 3.x</p>
 
-  [![Run Bot](https://img.shields.io/badge/🤖_Run-Telegram_Bot-blue)](https://t.me/bohd4nx)
-  [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/downloads/)
-  [![aiogram](https://img.shields.io/badge/aiogram-3.x-green)](https://docs.aiogram.dev/)
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
   <details>
     <summary>🖼️ Preview</summary>
     <br>
@@ -23,10 +18,10 @@
 
 ## 📋 Commands
 
-| Command | Description |
-|---------|-------------|
-| `/start` | Initialize payment process |
-| `/refund <transaction_id>` | Process payment refund |
+| Command                    | Description                |
+|----------------------------|----------------------------|
+| `/start`                   | Initialize payment process |
+| `/refund <transaction_id>` | Process payment refund     |
 
 ## 🛠️ Quick Setup
 
@@ -57,14 +52,6 @@
 ## 📝 License
 
 This project is MIT licensed. See LICENSE for more information.
-
-## 🌟 Support
-
-If you find this project useful:
-
-- Give it a star ⭐
-- Share with others 🔄
-- Consider contributing 🛠️
 
 ---
 

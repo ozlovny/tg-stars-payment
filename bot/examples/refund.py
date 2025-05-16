@@ -1,31 +1,19 @@
-from aiogram import Router
+from aiogram import Router, Bot
 from aiogram.exceptions import TelegramAPIError
 from aiogram.filters import Command
 from aiogram.methods.refund_star_payment import RefundStarPayment
 from aiogram.types import Message
 
-from config import MESSAGES
-from loader import bot
+from bot.utils import INVALID_COMMAND, REFUND_SUCCESS, REFUND_FAIL
 
 router = Router(name=__name__)
 
 
 @router.message(Command("refund"))
-async def process_refund(message: Message) -> None:
-    """
-    Process payment refund request.
-
-    Args:
-        message (Message): Message containing command and transaction ID
-        Format: /refund <transaction_id>
-
-    Sends:
-        - Success/failure confirmation
-        - Error message if format is invalid
-    """
+async def process_refund(message: Message, bot: Bot) -> None:
     parts = message.text.split()
     if len(parts) != 2:
-        await message.answer(MESSAGES['invalid_command'])
+        await message.answer(INVALID_COMMAND)
         await message.delete()
         return
 
@@ -37,9 +25,9 @@ async def process_refund(message: Message) -> None:
         ))
 
         await message.answer(
-            MESSAGES['refund_success'] if result else MESSAGES['refund_fail']
+            REFUND_SUCCESS if result else REFUND_FAIL
         )
         await message.delete()
     except TelegramAPIError:
-        await message.answer(MESSAGES['refund_fail'])
+        await message.answer(REFUND_FAIL)
         await message.delete()
